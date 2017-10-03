@@ -1,0 +1,13 @@
+.redDiv {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding:2px 2px 2px 2px;
+}
+
+.yellowDiv {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    padding:2px 2px 2px 2px;
+}

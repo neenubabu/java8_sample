@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+
+    <!-- Meta-Information -->
+    <!-- etc… -->
+
+    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+    <!-- etc… -->
+
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controller.js"></script>
+
+</head>
+<body ng-app="myAngularApp">
+<!--[if lt IE 7]>
+<!-- etc… -->
+<![endif]-->
+<h1>First AngularJS Application</h1>
+
+Enter Numbers to Multiply:
+<input type="text" ng-model="Num1" /> x <input type="text" ng-model="Num2" />
+= <span>{{Num1 * Num2}}</span>
+
+<div ng-controller="myController">
+    {{message}}
+    Enter Password: <input type="password" ng-model="password" /> <br />
+
+    <button ng-click="DisplayMessage(password)">Show Password</button>
+
+    Response Data: {{data}} <br />
+    Error: {{error}}
+</div>
+<div ng-class="{redDiv: enter, yellowDiv: leave}" ng-mouseenter="enter=true;leave=false;" ng-mouseleave="leave=true;enter=false">
+    Mouse <span ng-show="enter">Enter</span> <span ng-show="leave">Leave</span>
+</div>
+<!-- Our Website Content Goes Here -->
+<div ng-include='"templates/header.html"'></div>
+<div ng-view></div>
+
+<div ng-include='"templates/footer.html"'></div>
+
+<!-- Vendor: Javascripts -->
+<!-- etc… -->
+
+<span class="highlight"><!-- Vendor: Angular, followed by our custom Javascripts -->
+</span>
+
+<!-- Our Website Javascripts -->
+
+
+</body>
+</html>
